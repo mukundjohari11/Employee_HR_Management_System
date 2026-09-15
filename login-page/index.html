@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Portal | Employee Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="backdrop">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+  </div>
+
+  <div class="app-card">
+    <div class="card-body">
+
+      <!-- Left: auth panel -->
+      <div class="auth-panel">
+        <div class="auth-inner">
+
+          <div class="brand">
+            <span class="brand-mark">P</span>
+            <span class="brand-name">PulseHR</span>
+          </div>
+
+          <h1>Welcome back!</h1>
+
+          <form action="#" method="post">
+            <div class="pill-field">
+              <input type="text" id="empId" name="empId" placeholder="Employee ID or Username" required>
+            </div>
+
+            <div class="pill-field">
+              <input type="password" id="password" name="password" placeholder="Password" required>
+              <span class="eye" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </span>
+            </div>
+
+            <a href="#" class="forgot">Forgot Password?</a>
+
+            <button type="submit" class="btn-login">
+              <span class="btn-text">Login</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="divider"><span>or continue with</span></div>
+
+            <div class="social-row">
+              <button type="button" class="social-btn" aria-label="Continue with Google">
+                <svg viewBox="0 0 48 48" width="18" height="18"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.6 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.8 1.1 8 3l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-1.9 14.2-5.1l-6.5-5.5C29.6 35.4 26.9 36 24 36c-5.3 0-9.7-3.4-11.3-8.1l-6.6 5.1C9.6 39.6 16.3 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.7l6.5 5.5C39.9 37 44 31 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+              </button>
+              <button type="button" class="social-btn dark" aria-label="Continue with Apple">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M16.365 1.43c0 1.14-.468 2.19-1.23 2.98-.822.86-2.09 1.53-3.14 1.44-.13-1.1.42-2.24 1.19-3.03.85-.87 2.28-1.5 3.18-1.39zm3.41 16.94c-.5 1.17-1.1 2.32-1.98 3.39-.86 1.05-1.75 2.13-3.16 2.16-1.36.03-1.8-.81-3.36-.81-1.56 0-2.05.79-3.34.84-1.35.05-2.38-1.14-3.25-2.19-1.77-2.16-3.13-6.11-1.31-8.79.9-1.33 2.51-2.18 4.26-2.2 1.32-.03 2.56.87 3.36.87.8 0 2.31-1.08 3.9-.92.66.03 2.53.27 3.72 2.02-.1.06-2.22 1.28-2.2 3.83.02 3.04 2.68 4.05 2.36 4.8z"/></svg>
+              </button>
+              <button type="button" class="social-btn dark" aria-label="Continue with Microsoft">
+                <svg viewBox="0 0 23 23" width="15" height="15"><rect x="1" y="1" width="10" height="10" fill="#f35325"/><rect x="12" y="1" width="10" height="10" fill="#81bc06"/><rect x="1" y="12" width="10" height="10" fill="#05a6f0"/><rect x="12" y="12" width="10" height="10" fill="#ffba08"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <p class="register-note">Not a member? <a href="#">Register now</a></p>
+        </div>
+      </div>
+
+      <!-- Right: illustration showcase panel -->
+      <div class="showcase-panel">
+
+        <div class="avatar-bubble avatar-1">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#bfe0ae"/><circle cx="14" cy="18" r="2" fill="#1a1a1a"/><circle cx="26" cy="18" r="2" fill="#1a1a1a"/><path d="M13 25c3 3 11 3 14 0" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="avatar-bubble avatar-2">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#ffffff"/><circle cx="14" cy="18" r="2" fill="#1a1a1a"/><circle cx="26" cy="18" r="2" fill="#1a1a1a"/><ellipse cx="20" cy="27" rx="3" ry="4" fill="#1a1a1a"/></svg>
+        </div>
+
+        <svg class="illustration" viewBox="0 0 300 340" width="300" height="340">
+          <defs>
+            <linearGradient id="sweater" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#8fc17b"/>
+              <stop offset="100%" stop-color="#5d9c59"/>
+            </linearGradient>
+            <radialGradient id="skin" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stop-color="#ffdbb0"/>
+              <stop offset="100%" stop-color="#f2c9a0"/>
+            </radialGradient>
+            <filter id="illuShadow" x="-30%" y="-10%" width="160%" height="140%">
+              <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#1a1a1a" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+
+          <g filter="url(#illuShadow)">
+            <!-- hair loop swirls -->
+            <path d="M150 60 C130 20, 90 20, 95 55" fill="none" stroke="#5d9c59" stroke-width="3" stroke-linecap="round"/>
+            <path d="M160 55 C170 15, 210 15, 205 50" fill="none" stroke="#5d9c59" stroke-width="3" stroke-linecap="round"/>
+            <path d="M150 60 C150 15, 150 10, 150 5" fill="none" stroke="#5d9c59" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- crossed legs -->
+            <path d="M70 300 Q150 340 230 300 L230 320 Q150 355 70 320 Z" fill="#f4efe6" stroke="#1a1a1a" stroke-width="2"/>
+
+            <!-- torso / sweater -->
+            <path d="M95 165 Q150 140 205 165 L215 300 Q150 320 85 300 Z" fill="url(#sweater)" stroke="#1a1a1a" stroke-width="2"/>
+            <!-- collar -->
+            <path d="M130 165 Q150 185 170 165" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+            <!-- heart -->
+            <path d="M150 220 C142 208 122 212 122 228 C122 242 150 258 150 258 C150 258 178 242 178 228 C178 212 158 208 150 220 Z" fill="none" stroke="#ffffff" stroke-width="3"/>
+
+            <!-- arms -->
+            <path d="M96 180 C60 190 45 220 55 240" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+            <path d="M204 180 C240 190 255 220 245 240" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+            <!-- hands (ok gesture) -->
+            <circle cx="52" cy="245" r="14" fill="url(#skin)" stroke="#1a1a1a" stroke-width="2"/>
+            <circle cx="52" cy="245" r="5" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+            <circle cx="248" cy="245" r="14" fill="url(#skin)" stroke="#1a1a1a" stroke-width="2"/>
+            <circle cx="248" cy="245" r="5" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+            <!-- head -->
+            <circle cx="150" cy="110" r="48" fill="url(#skin)" stroke="#1a1a1a" stroke-width="2"/>
+            <!-- hair cap -->
+            <path d="M100 100 Q105 55 150 55 Q195 55 200 100 Q195 80 150 78 Q105 80 100 100 Z" fill="#1a1a1a"/>
+            <!-- face -->
+            <path d="M128 112 q6 6 12 0" fill="none" stroke="#1a1a1a" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M160 112 q6 6 12 0" fill="none" stroke="#1a1a1a" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M142 132 q8 6 16 0" fill="none" stroke="#1a1a1a" stroke-width="2.4" stroke-linecap="round"/>
+            <!-- blush -->
+            <ellipse cx="122" cy="122" rx="6" ry="3.5" fill="#f2a97e" opacity="0.5"/>
+            <ellipse cx="178" cy="122" rx="6" ry="3.5" fill="#f2a97e" opacity="0.5"/>
+          </g>
+        </svg>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0" fill="none" stroke="#5d9c59" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-text">
+            <p class="stat-title">Team Overview</p>
+            <p class="stat-sub">12 Employees</p>
+            <span class="stat-tag">HR</span>
+          </div>
+          <div class="progress-ring">
+            <span>84%</span>
+          </div>
+        </div>
+
+        <p class="showcase-caption">Make your HR life easier and organized with <strong>PulseHR</strong>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
