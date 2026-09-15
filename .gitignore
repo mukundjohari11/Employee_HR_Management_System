@@ -1,0 +1,5 @@
+# Unrelated reference clone (anthropics/skills), not part of this project
+skills/
+
+# Local reference screenshots used during design
+Screenshot*.png
