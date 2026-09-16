@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRMS Dashboard</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================
+         SIDEBAR
+    ======================================= -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <h2>HRMS</h2>
+
+            <span>Management System</span>
+
+        </div>
+
+
+        <!-- MAIN MENU -->
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav>
+
+            <a href="index.html" class="menu-link active">
+                <i class="fas fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-link">
+                <i class="fas fa-users"></i>
+                <span>Employees</span>
+            </a>
+
+            <a href="#" class="menu-link">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Employee</span>
+            </a>
+
+            <a href="#" class="menu-link">
+                <i class="fas fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="#" class="menu-link">
+                <i class="fas fa-plane-departure"></i>
+                <span>Leave Management</span>
+            </a>
+
+            <a href="#" class="menu-link">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Payroll</span>
+            </a>
+
+            <a href="#" class="menu-link">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- ==================================
+             ADMIN SECTION
+        =================================== -->
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="admin-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <i class="fas fa-ellipsis-h"></i>
+
+            </div>
+
+
+            <a href="#" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ======================================
+         MAIN CONTENT
+    ======================================= -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>Good Morning, Admin! 👋</h1>
+
+                <p>
+                    Here's what's happening with your organization today.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="date">
+                    <i class="far fa-calendar"></i>
+                    <span>16 September 2026</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ======================================
+             STATISTICS
+        ======================================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card purple">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <span class="growth">
+                        +8.2%
+                    </span>
+
+                </div>
+
+                <h3>Total Employees</h3>
+
+                <h2>248</h2>
+
+                <p>Compared to last month</p>
+
+            </div>
+
+
+
+            <div class="stat-card blue">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+
+                    <span class="growth">
+                        +4.5%
+                    </span>
+
+                </div>
+
+                <h3>Present Today</h3>
+
+                <h2>229</h2>
+
+                <p>92.6% attendance</p>
+
+            </div>
+
+
+
+            <div class="stat-card orange">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+
+                    <span class="growth">
+                        3.1%
+                    </span>
+
+                </div>
+
+                <h3>On Leave</h3>
+
+                <h2>12</h2>
+
+                <p>Employees on leave</p>
+
+            </div>
+
+
+
+            <div class="stat-card green">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+
+                    <span class="growth">
+                        +6.8%
+                    </span>
+
+                </div>
+
+                <h3>Monthly Payroll</h3>
+
+                <h2>₹18.4L</h2>
+
+                <p>Current month payroll</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             CHARTS
+        ======================================= -->
+
+        <section class="charts">
+
+
+            <!-- EMPLOYEE CHART -->
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+
+                    <div>
+                        <h2>Employee Overview</h2>
+
+                        <p>
+                            Employee count throughout the year
+                        </p>
+                    </div>
+
+                    <select>
+                        <option>2026</option>
+                        <option>2025</option>
+                        <option>2024</option>
+                    </select>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="y-axis">
+
+                        <span>30L</span>
+                        <span>15L</span>
+                        <span>0</span>
+
+                    </div>
+
+
+                    <div class="bars">
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 82%;"
+                            ></div>
+
+                            <span>Jan</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 88%;"
+                            ></div>
+
+                            <span>Feb</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 92%;"
+                            ></div>
+
+                            <span>Mar</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 86%;"
+                            ></div>
+
+                            <span>Apr</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 95%;"
+                            ></div>
+
+                            <span>May</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 90%;"
+                            ></div>
+
+                            <span>Jun</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 96%;"
+                            ></div>
+
+                            <span>Jul</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 94%;"
+                            ></div>
+
+                            <span>Aug</span>
+
+                        </div>
+
+
+                        <div class="bar-item">
+
+                            <div
+                                class="bar"
+                                style="height: 98%;"
+                            ></div>
+
+                            <span>Sep</span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ATTENDANCE -->
+
+            <div class="chart-card attendance-card">
+
+                <div class="chart-header">
+
+                    <div>
+
+                        <h2>Attendance</h2>
+
+                        <p>
+                            Today's attendance
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="attendance-content">
+
+
+                    <div class="circle">
+
+                        <div>
+
+                            <strong>92.6%</strong>
+
+                            <span>Present</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-info">
+
+
+                        <div>
+
+                            <span class="dot present"></span>
+
+                            <div>
+                                <strong>229</strong>
+                                <small>Present</small>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="dot absent"></span>
+
+                            <div>
+                                <strong>7</strong>
+                                <small>Absent</small>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="dot leave"></span>
+
+                            <div>
+                                <strong>12</strong>
+                                <small>On Leave</small>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             RECENT EMPLOYEES
+        ======================================= -->
+
+        <section class="employees-card">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Recent Employees</h2>
+
+                    <p>
+                        Recently added employees
+                    </p>
+
+                </div>
+
+                <a href="#">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+
+                            <th>Department</th>
+
+                            <th>Position</th>
+
+                            <th>Joining Date</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        RS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Sharma
+                                        </strong>
+
+                                        <small>
+                                            EMP00124
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Technology
+                            </td>
+
+                            <td>
+                                Software Developer
+                            </td>
+
+                            <td>
+                                12 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        PS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Singh
+                                        </strong>
+
+                                        <small>
+                                            EMP00125
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Human Resources
+                            </td>
+
+                            <td>
+                                HR Manager
+                            </td>
+
+                            <td>
+                                10 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        AK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Amit Kumar
+                                        </strong>
+
+                                        <small>
+                                            EMP00126
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Finance
+                            </td>
+
+                            <td>
+                                Accountant
+                            </td>
+
+                            <td>
+                                08 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        SK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Sneha Kapoor
+                                        </strong>
+
+                                        <small>
+                                            EMP00127
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+                                Marketing
+                            </td>
+
+                            <td>
+                                Marketing Executive
+                            </td>
+
+                            <td>
+                                05 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status active">
+                                    Active
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
