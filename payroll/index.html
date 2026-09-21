@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll - HRMS</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <span>HRMS</span>
+        </div>
+
+        <nav class="nav-menu">
+
+            <a href="../dashboard/index.html" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="../employees/index.html" class="nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Employees</span>
+            </a>
+
+            <a href="../add-employee/index.html" class="nav-item">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Add Employee</span>
+            </a>
+
+            <a href="../attendance/index.html" class="nav-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="../leave-management/index.html" class="nav-item">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Leave Management</span>
+            </a>
+
+            <a href="../payroll/index.html" class="nav-item active">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                <span>Payroll</span>
+            </a>
+
+            <a href="../settings/index.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="../login%20page/index.html" class="nav-item logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div>
+                <h1>Payroll</h1>
+                <p>Manage employee salaries and payroll records</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">AD</div>
+
+                    <div>
+                        <strong>Admin</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Payroll Stats -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div>
+                    <p>Total Payroll</p>
+                    <h2>₹28.4L</h2>
+                    <span class="stat-info">September 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <p>Employees</p>
+                    <h2>248</h2>
+                    <span class="stat-info">On payroll</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon yellow">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+                    <p>Pending</p>
+                    <h2>18</h2>
+                    <span class="stat-info">Awaiting processing</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+                    <p>Processed</p>
+                    <h2>230</h2>
+                    <span class="stat-info">This month</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Payroll Records -->
+        <section class="content-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Payroll Records</h2>
+                    <p>View and manage monthly employee payroll</p>
+                </div>
+
+                <button class="btn-primary">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    Generate Payroll
+                </button>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filter-bar">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        placeholder="Search employee or ID..."
+                    >
+                </div>
+
+                <select>
+                    <option>September 2026</option>
+                    <option>August 2026</option>
+                    <option>July 2026</option>
+                    <option>June 2026</option>
+                </select>
+
+                <select>
+                    <option>All Departments</option>
+                    <option>Technology</option>
+                    <option>Human Resources</option>
+                    <option>Finance</option>
+                    <option>Marketing</option>
+                    <option>Operations</option>
+                </select>
+
+                <select>
+                    <option>All Status</option>
+                    <option>Processed</option>
+                    <option>Pending</option>
+                </select>
+
+            </div>
+
+
+            <!-- Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Basic Salary</th>
+                            <th>Allowances</th>
+                            <th>Deductions</th>
+                            <th>Net Salary</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        <!-- Employee 1 -->
+                        <tr>
+
+                            <td>
+                                <div class="employee">
+
+                                    <div class="avatar">
+                                        RS
+                                    </div>
+
+                                    <div>
+                                        <strong>Rahul Sharma</strong>
+                                        <small>EMP001</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Technology</td>
+
+                            <td>₹75,000</td>
+
+                            <td class="positive">
+                                + ₹12,000
+                            </td>
+
+                            <td class="negative">
+                                - ₹5,500
+                            </td>
+
+                            <td class="salary">
+                                ₹81,500
+                            </td>
+
+                            <td>
+                                <span class="status processed">
+                                    Processed
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button class="view"
+                                            title="View">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="download"
+                                            title="Download">
+                                        <i class="fa-solid fa-download"></i>
+                                    </button>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Employee 2 -->
+                        <tr>
+
+                            <td>
+                                <div class="employee">
+
+                                    <div class="avatar">
+                                        PS
+                                    </div>
+
+                                    <div>
+                                        <strong>Priya Singh</strong>
+                                        <small>EMP002</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Human Resources</td>
+
+                            <td>₹62,000</td>
+
+                            <td class="positive">
+                                + ₹9,500
+                            </td>
+
+                            <td class="negative">
+                                - ₹4,200
+                            </td>
+
+                            <td class="salary">
+                                ₹67,300
+                            </td>
+
+                            <td>
+                                <span class="status processed">
+                                    Processed
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="download">
+                                        <i class="fa-solid fa-download"></i>
+                                    </button>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Employee 3 -->
+                        <tr>
+
+                            <td>
+                                <div class="employee">
+
+                                    <div class="avatar">
+                                        AK
+                                    </div>
+
+                                    <div>
+                                        <strong>Amit Kumar</strong>
+                                        <small>EMP003</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Finance</td>
+
+                            <td>₹58,000</td>
+
+                            <td class="positive">
+                                + ₹8,000
+                            </td>
+
+                            <td class="negative">
+                                - ₹3,800
+                            </td>
+
+                            <td class="salary">
+                                ₹62,200
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="process">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Employee 4 -->
+                        <tr>
+
+                            <td>
+                                <div class="employee">
+
+                                    <div class="avatar">
+                                        SK
+                                    </div>
+
+                                    <div>
+                                        <strong>Sneha Kapoor</strong>
+                                        <small>EMP004</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Marketing</td>
+
+                            <td>₹55,000</td>
+
+                            <td class="positive">
+                                + ₹7,500
+                            </td>
+
+                            <td class="negative">
+                                - ₹3,200
+                            </td>
+
+                            <td class="salary">
+                                ₹59,300
+                            </td>
+
+                            <td>
+                                <span class="status processed">
+                                    Processed
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="download">
+                                        <i class="fa-solid fa-download"></i>
+                                    </button>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Employee 5 -->
+                        <tr>
+
+                            <td>
+                                <div class="employee">
+
+                                    <div class="avatar">
+                                        VJ
+                                    </div>
+
+                                    <div>
+                                        <strong>Vikram Joshi</strong>
+                                        <small>EMP005</small>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td>Operations</td>
+
+                            <td>₹51,000</td>
+
+                            <td class="positive">
+                                + ₹6,500
+                            </td>
+
+                            <td class="negative">
+                                - ₹2,900
+                            </td>
+
+                            <td class="salary">
+                                ₹54,600
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+
+                                    <button class="view">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                                    <button class="process">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Pagination -->
+            <div class="pagination">
+
+                <p>
+                    Showing 1 to 5 of 248 employees
+                </p>
+
+                <div class="pages">
+
+                    <button class="page-arrow">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="page active">1</button>
+                    <button class="page">2</button>
+                    <button class="page">3</button>
+                    <button class="page">4</button>
+
+                    <button class="page-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
