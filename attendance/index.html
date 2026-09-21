@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance - HRMS</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================
+         SIDEBAR
+    ======================================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <h2>HRMS</h2>
+
+            <span>Management System</span>
+
+        </div>
+
+
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <nav>
+
+            <a href="../dashboard/index.html" class="menu-link">
+                <i class="fas fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="../employees/index.html" class="menu-link">
+                <i class="fas fa-users"></i>
+                <span>Employees</span>
+            </a>
+
+            <a href="../add-employee/index.html" class="menu-link">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Employee</span>
+            </a>
+
+            <a href="index.html" class="menu-link active">
+                <i class="fas fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="../leave-management/index.html" class="menu-link">
+                <i class="fas fa-plane-departure"></i>
+                <span>Leave Management</span>
+            </a>
+
+            <a href="../payroll/index.html" class="menu-link">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Payroll</span>
+            </a>
+
+            <a href="../settings/index.html" class="menu-link">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="admin-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <i class="fas fa-ellipsis-h"></i>
+
+            </div>
+
+
+            <a href="../login%20page/index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ======================================
+         MAIN CONTENT
+    ======================================= -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>Attendance</h1>
+
+                <p>
+                    Track daily check-ins and attendance status.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="date">
+                    <i class="far fa-calendar"></i>
+                    <span>21 September 2026</span>
+                </div>
+
+                <button class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ======================================
+             STATISTICS
+        ======================================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card purple">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+
+                    <span class="growth">
+                        92.6%
+                    </span>
+
+                </div>
+
+                <h3>Present Today</h3>
+
+                <h2>229</h2>
+
+                <p>Out of 248 employees</p>
+
+            </div>
+
+
+            <div class="stat-card blue">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-user-times"></i>
+                    </div>
+
+                    <span class="growth">
+                        2.8%
+                    </span>
+
+                </div>
+
+                <h3>Absent Today</h3>
+
+                <h2>7</h2>
+
+                <p>Unplanned absences</p>
+
+            </div>
+
+
+            <div class="stat-card orange">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+
+                    <span class="growth">
+                        1.6%
+                    </span>
+
+                </div>
+
+                <h3>Late Arrivals</h3>
+
+                <h2>4</h2>
+
+                <p>Checked in after 9:30 AM</p>
+
+            </div>
+
+
+            <div class="stat-card green">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+
+                    <span class="growth">
+                        3.1%
+                    </span>
+
+                </div>
+
+                <h3>On Leave</h3>
+
+                <h2>12</h2>
+
+                <p>Approved leave today</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             FILTER BAR
+        ======================================= -->
+
+        <section class="filter-bar">
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search employees by name or ID...">
+            </div>
+
+            <input type="date" value="2026-09-21">
+
+            <select>
+                <option>All Status</option>
+                <option>Present</option>
+                <option>Absent</option>
+                <option>Late</option>
+                <option>On Leave</option>
+            </select>
+
+        </section>
+
+
+
+        <!-- ======================================
+             ATTENDANCE TABLE
+        ======================================= -->
+
+        <section class="employees-card">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Today's Attendance</h2>
+
+                    <p>
+                        21 September 2026
+                    </p>
+
+                </div>
+
+                <a href="#">
+                    Export Report
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+
+                            <th>Department</th>
+
+                            <th>Check In</th>
+
+                            <th>Check Out</th>
+
+                            <th>Working Hours</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        RS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Sharma
+                                        </strong>
+
+                                        <small>
+                                            EMP00124
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Technology</td>
+
+                            <td>09:12 AM</td>
+
+                            <td>06:20 PM</td>
+
+                            <td>9h 8m</td>
+
+                            <td>
+                                <span class="status active">
+                                    Present
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        PS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Singh
+                                        </strong>
+
+                                        <small>
+                                            EMP00125
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Human Resources</td>
+
+                            <td>09:45 AM</td>
+
+                            <td>06:05 PM</td>
+
+                            <td>8h 20m</td>
+
+                            <td>
+                                <span class="status late">
+                                    Late
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        AK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Amit Kumar
+                                        </strong>
+
+                                        <small>
+                                            EMP00126
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Finance</td>
+
+                            <td>&mdash;</td>
+
+                            <td>&mdash;</td>
+
+                            <td>&mdash;</td>
+
+                            <td>
+                                <span class="status on-leave">
+                                    On Leave
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        SK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Sneha Kapoor
+                                        </strong>
+
+                                        <small>
+                                            EMP00127
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Marketing</td>
+
+                            <td>09:05 AM</td>
+
+                            <td>06:15 PM</td>
+
+                            <td>9h 10m</td>
+
+                            <td>
+                                <span class="status active">
+                                    Present
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee">
+
+                                    <div class="employee-avatar">
+                                        VJ
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Vikram Joshi
+                                        </strong>
+
+                                        <small>
+                                            EMP00128
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Operations</td>
+
+                            <td>&mdash;</td>
+
+                            <td>&mdash;</td>
+
+                            <td>&mdash;</td>
+
+                            <td>
+                                <span class="status inactive">
+                                    Absent
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
