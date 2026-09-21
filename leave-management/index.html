@@ -17,133 +17,180 @@
     <aside class="sidebar">
 
         <div class="logo">
+
             <div class="logo-icon">
-                <i class="fa-solid fa-users"></i>
+                <i class="fas fa-users"></i>
             </div>
-            <span>HRMS</span>
+
+            <h2>HRMS</h2>
+
+            <span>Management System</span>
+
         </div>
 
-        <nav class="nav-menu">
 
-            <a href="../dashboard/index.html" class="nav-item">
-                <i class="fa-solid fa-chart-line"></i>
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <nav>
+
+            <a href="../dashboard/index.html" class="menu-link">
+                <i class="fas fa-chart-pie"></i>
                 <span>Dashboard</span>
             </a>
 
-            <a href="../employees/index.html" class="nav-item">
-                <i class="fa-solid fa-users"></i>
+            <a href="../employees/index.html" class="menu-link">
+                <i class="fas fa-users"></i>
                 <span>Employees</span>
             </a>
 
-            <a href="../add-employee/index.html" class="nav-item">
-                <i class="fa-solid fa-user-plus"></i>
+            <a href="../add-employee/index.html" class="menu-link">
+                <i class="fas fa-user-plus"></i>
                 <span>Add Employee</span>
             </a>
 
-            <a href="../attendance/index.html" class="nav-item">
-                <i class="fa-solid fa-calendar-check"></i>
+            <a href="../attendance/index.html" class="menu-link">
+                <i class="fas fa-calendar-check"></i>
                 <span>Attendance</span>
             </a>
 
-            <a href="../leave-management/index.html" class="nav-item active">
-                <i class="fa-solid fa-calendar-days"></i>
+            <a href="index.html" class="menu-link active">
+                <i class="fas fa-plane-departure"></i>
                 <span>Leave Management</span>
             </a>
 
-            <a href="../payroll/index.html" class="nav-item">
-                <i class="fa-solid fa-money-check-dollar"></i>
+            <a href="../payroll/index.html" class="menu-link">
+                <i class="fas fa-money-bill-wave"></i>
                 <span>Payroll</span>
             </a>
 
-            <a href="../settings/index.html" class="nav-item">
-                <i class="fa-solid fa-gear"></i>
+            <a href="../settings/index.html" class="menu-link">
+                <i class="fas fa-cog"></i>
                 <span>Settings</span>
             </a>
 
         </nav>
 
+
         <div class="sidebar-bottom">
-            <a href="../login%20page/index.html" class="nav-item logout">
-                <i class="fa-solid fa-right-from-bracket"></i>
+
+            <div class="admin-profile">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="admin-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <i class="fas fa-ellipsis-h"></i>
+
+            </div>
+
+
+            <a href="../login%20page/index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
             </a>
+
         </div>
 
     </aside>
 
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main">
 
         <!-- Topbar -->
         <header class="topbar">
-            <div>
+
+            <div class="welcome">
                 <h1>Leave Management</h1>
                 <p>Manage employee leave requests</p>
             </div>
 
-            <div class="topbar-right">
-                <div class="notification">
-                    <i class="fa-regular fa-bell"></i>
-                    <span>3</span>
+            <div class="top-actions">
+
+                <button class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="date">
+                    <i class="far fa-calendar"></i>
+                    <span>21 September 2026</span>
                 </div>
 
-                <div class="profile">
-                    <div class="profile-avatar">AD</div>
-                    <div>
-                        <strong>Admin</strong>
-                        <small>Administrator</small>
-                    </div>
-                </div>
             </div>
+
         </header>
 
 
         <!-- Summary Cards -->
-        <section class="stats-grid">
+        <section class="stats">
 
-            <div class="stat-card">
-                <div class="stat-icon blue">
-                    <i class="fa-solid fa-file-lines"></i>
+            <div class="stat-card purple">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
+                    <span class="growth">This month</span>
                 </div>
-                <div>
-                    <p>Total Requests</p>
-                    <h2>48</h2>
-                    <span class="stat-info">This month</span>
-                </div>
+
+                <h3>Total Requests</h3>
+                <h2>48</h2>
+                <p>Leave applications filed</p>
+
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon yellow">
-                    <i class="fa-solid fa-clock"></i>
+            <div class="stat-card blue">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <span class="growth">Needs approval</span>
                 </div>
-                <div>
-                    <p>Pending</p>
-                    <h2>12</h2>
-                    <span class="stat-info">Needs approval</span>
-                </div>
+
+                <h3>Pending</h3>
+                <h2>12</h2>
+                <p>Awaiting a decision</p>
+
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon green">
-                    <i class="fa-solid fa-circle-check"></i>
+            <div class="stat-card orange">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-circle-check"></i>
+                    </div>
+                    <span class="growth">This month</span>
                 </div>
-                <div>
-                    <p>Approved</p>
-                    <h2>31</h2>
-                    <span class="stat-info">This month</span>
-                </div>
+
+                <h3>Approved</h3>
+                <h2>31</h2>
+                <p>Leave requests granted</p>
+
             </div>
 
-            <div class="stat-card">
-                <div class="stat-icon red">
-                    <i class="fa-solid fa-circle-xmark"></i>
+            <div class="stat-card green">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-circle-xmark"></i>
+                    </div>
+                    <span class="growth">This month</span>
                 </div>
-                <div>
-                    <p>Rejected</p>
-                    <h2>5</h2>
-                    <span class="stat-info">This month</span>
-                </div>
+
+                <h3>Rejected</h3>
+                <h2>5</h2>
+                <p>Requests declined</p>
+
             </div>
 
         </section>
