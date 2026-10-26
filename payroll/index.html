@@ -7,7 +7,6 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -63,7 +62,7 @@
         </nav>
 
         <div class="sidebar-bottom">
-            <a href="../login%20page/index.html" class="nav-item logout">
+            <a href="../login/index.html" class="nav-item logout">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span>Logout</span>
             </a>
@@ -115,7 +114,7 @@
 
                 <div>
                     <p>Total Payroll</p>
-                    <h2>₹28.4L</h2>
+                    <h2 id="totalPayrollAmount">₹28.4L</h2>
                     <span class="stat-info">September 2026</span>
                 </div>
 
@@ -130,7 +129,7 @@
 
                 <div>
                     <p>Employees</p>
-                    <h2>248</h2>
+                    <h2 id="payrollEmployeesCount">5</h2>
                     <span class="stat-info">On payroll</span>
                 </div>
 
@@ -145,7 +144,7 @@
 
                 <div>
                     <p>Pending</p>
-                    <h2>18</h2>
+                    <h2 id="payrollPendingCount">2</h2>
                     <span class="stat-info">Awaiting processing</span>
                 </div>
 
@@ -160,7 +159,7 @@
 
                 <div>
                     <p>Processed</p>
-                    <h2>230</h2>
+                    <h2 id="payrollProcessedCount">3</h2>
                     <span class="stat-info">This month</span>
                 </div>
 
@@ -179,7 +178,7 @@
                     <p>View and manage monthly employee payroll</p>
                 </div>
 
-                <button class="btn-primary">
+                <button class="btn-primary" id="openGenerateModalBtn">
                     <i class="fa-solid fa-file-invoice-dollar"></i>
                     Generate Payroll
                 </button>
@@ -194,30 +193,31 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input
                         type="text"
+                        id="payrollSearch"
                         placeholder="Search employee or ID..."
                     >
                 </div>
 
-                <select>
-                    <option>September 2026</option>
-                    <option>August 2026</option>
-                    <option>July 2026</option>
-                    <option>June 2026</option>
+                <select id="payrollMonthFilter">
+                    <option value="September 2026">September 2026</option>
+                    <option value="August 2026">August 2026</option>
+                    <option value="July 2026">July 2026</option>
+                    <option value="June 2026">June 2026</option>
                 </select>
 
-                <select>
-                    <option>All Departments</option>
-                    <option>Technology</option>
-                    <option>Human Resources</option>
-                    <option>Finance</option>
-                    <option>Marketing</option>
-                    <option>Operations</option>
+                <select id="payrollDeptFilter">
+                    <option value="All">All Departments</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Operations">Operations</option>
                 </select>
 
-                <select>
-                    <option>All Status</option>
-                    <option>Processed</option>
-                    <option>Pending</option>
+                <select id="payrollStatusFilter">
+                    <option value="All">All Status</option>
+                    <option value="Processed">Processed</option>
+                    <option value="Pending">Pending</option>
                 </select>
 
             </div>
@@ -566,6 +566,6 @@
         </section>
 
     </main>
-
+    <script src="script.js"></script>
 </body>
 </html>
