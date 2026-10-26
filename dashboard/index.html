@@ -54,32 +54,32 @@
                 <span>Dashboard</span>
             </a>
 
-            <a href="#" class="menu-link">
+            <a href="../employees/index.html" class="menu-link">
                 <i class="fas fa-users"></i>
                 <span>Employees</span>
             </a>
 
-            <a href="#" class="menu-link">
+            <a href="../add-employee/index.html" class="menu-link">
                 <i class="fas fa-user-plus"></i>
                 <span>Add Employee</span>
             </a>
 
-            <a href="#" class="menu-link">
+            <a href="../attendance/index.html" class="menu-link">
                 <i class="fas fa-calendar-check"></i>
                 <span>Attendance</span>
             </a>
 
-            <a href="#" class="menu-link">
+            <a href="../leave-management/index.html" class="menu-link">
                 <i class="fas fa-plane-departure"></i>
                 <span>Leave Management</span>
             </a>
 
-            <a href="#" class="menu-link">
+            <a href="../payroll/index.html" class="menu-link">
                 <i class="fas fa-money-bill-wave"></i>
                 <span>Payroll</span>
             </a>
 
-            <a href="#" class="menu-link">
+            <a href="../settings/index.html" class="menu-link">
                 <i class="fas fa-cog"></i>
                 <span>Settings</span>
             </a>
@@ -109,7 +109,7 @@
             </div>
 
 
-            <a href="#" class="logout">
+            <a href="../login/index.html" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
             </a>
@@ -528,9 +528,16 @@
 
                 </div>
 
-                <a href="#">
-                    View All
-                </a>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="background: #f1f5f9; padding: 6px 14px; border-radius: 8px; display: flex; align-items: center; gap: 8px; border: 1px solid #e2e8f0;">
+                        <i class="fas fa-search" style="color: #64748b; font-size: 13px;"></i>
+                        <input type="text" id="recentSearch" placeholder="Search employees..." style="border: none; background: transparent; outline: none; font-size: 13px;">
+                    </div>
+
+                    <a href="../employees/index.html" style="text-decoration: none; color: #16a34a; font-weight: 600; font-size: 13px;">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
             </div>
 
@@ -762,7 +769,7 @@
 
 
     </main>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
