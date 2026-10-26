@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management - HRMS</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../shared/css/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <h2>HRMS</h2>
+
+            <span>Management System</span>
+
+        </div>
+
+
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <nav>
+
+            <a href="../dashboard/index.html" class="menu-link">
+                <i class="fas fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="../employees/index.html" class="menu-link">
+                <i class="fas fa-users"></i>
+                <span>Employees</span>
+            </a>
+
+            <a href="../add-employee/index.html" class="menu-link">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Employee</span>
+            </a>
+
+            <a href="../attendance/index.html" class="menu-link">
+                <i class="fas fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="index.html" class="menu-link active">
+                <i class="fas fa-plane-departure"></i>
+                <span>Leave Management</span>
+            </a>
+
+            <a href="../payroll/index.html" class="menu-link">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Payroll</span>
+            </a>
+
+            <a href="../settings/index.html" class="menu-link">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="admin-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <i class="fas fa-ellipsis-h"></i>
+
+            </div>
+
+
+            <a href="../login/index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="welcome">
+                <h1>Leave Management</h1>
+                <p>Manage employee leave requests</p>
+            </div>
+
+            <div class="top-actions">
+
+                <button class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="date">
+                    <i class="far fa-calendar"></i>
+                    <span>21 September 2026</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="stats">
+
+            <div class="stat-card purple">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
+                    <span class="growth">This month</span>
+                </div>
+
+                <h3>Total Requests</h3>
+                <h2>48</h2>
+                <p>Leave applications filed</p>
+
+            </div>
+
+            <div class="stat-card blue">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <span class="growth">Needs approval</span>
+                </div>
+
+                <h3>Pending</h3>
+                <h2>12</h2>
+                <p>Awaiting a decision</p>
+
+            </div>
+
+            <div class="stat-card orange">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-circle-check"></i>
+                    </div>
+                    <span class="growth">This month</span>
+                </div>
+
+                <h3>Approved</h3>
+                <h2>31</h2>
+                <p>Leave requests granted</p>
+
+            </div>
+
+            <div class="stat-card green">
+
+                <div class="stat-top">
+                    <div class="stat-icon">
+                        <i class="fas fa-circle-xmark"></i>
+                    </div>
+                    <span class="growth">This month</span>
+                </div>
+
+                <h3>Rejected</h3>
+                <h2>5</h2>
+                <p>Requests declined</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Leave Requests -->
+        <section class="content-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Leave Requests</h2>
+                    <p>Review and manage employee leave applications</p>
+                </div>
+
+                <button class="btn-primary" id="openApplyLeaveBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    Apply Leave
+                </button>
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filter-bar">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="leaveSearch" placeholder="Search employee or ID...">
+                </div>
+
+                <select id="leaveTypeFilter">
+                    <option value="All">All Leave Types</option>
+                    <option value="Casual Leave">Casual Leave</option>
+                    <option value="Sick Leave">Sick Leave</option>
+                    <option value="Earned Leave">Earned Leave</option>
+                    <option value="Emergency Leave">Emergency Leave</option>
+                </select>
+
+                <select id="leaveStatusFilter">
+                    <option value="All">All Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <input type="date" id="leaveDateFilter">
+
+            </div>
+
+
+            <!-- Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Leave Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Days</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                <div class="employee">
+                                    <div class="avatar">RS</div>
+                                    <div>
+                                        <strong>Rahul Sharma</strong>
+                                        <small>EMP001</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Technology</td>
+                            <td>Casual Leave</td>
+                            <td>Sep 22, 2026</td>
+                            <td>Sep 23, 2026</td>
+                            <td>2</td>
+                            <td>Personal work</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+                                    <button class="approve" title="Approve">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+
+                                    <button class="reject" title="Reject">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+
+                                    <button class="view" title="View">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <div class="employee">
+                                    <div class="avatar">PS</div>
+                                    <div>
+                                        <strong>Priya Singh</strong>
+                                        <small>EMP002</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Human Resources</td>
+                            <td>Sick Leave</td>
+                            <td>Sep 20, 2026</td>
+                            <td>Sep 21, 2026</td>
+                            <td>2</td>
+                            <td>Health issue</td>
+
+                            <td>
+                                <span class="status approved">
+                                    Approved
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+                                    <button class="approve" title="Approved">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+
+                                    <button class="view" title="View">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <div class="employee">
+                                    <div class="avatar">AK</div>
+                                    <div>
+                                        <strong>Amit Kumar</strong>
+                                        <small>EMP003</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Finance</td>
+                            <td>Earned Leave</td>
+                            <td>Sep 25, 2026</td>
+                            <td>Sep 27, 2026</td>
+                            <td>3</td>
+                            <td>Family function</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+                                    <button class="approve" title="Approve">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+
+                                    <button class="reject" title="Reject">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+
+                                    <button class="view" title="View">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <div class="employee">
+                                    <div class="avatar">SK</div>
+                                    <div>
+                                        <strong>Sneha Kapoor</strong>
+                                        <small>EMP004</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Marketing</td>
+                            <td>Casual Leave</td>
+                            <td>Sep 18, 2026</td>
+                            <td>Sep 19, 2026</td>
+                            <td>2</td>
+                            <td>Personal work</td>
+
+                            <td>
+                                <span class="status approved">
+                                    Approved
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+                                    <button class="approve" title="Approved">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+
+                                    <button class="view" title="View">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <div class="employee">
+                                    <div class="avatar">VJ</div>
+                                    <div>
+                                        <strong>Vikram Joshi</strong>
+                                        <small>EMP005</small>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td>Operations</td>
+                            <td>Emergency Leave</td>
+                            <td>Sep 15, 2026</td>
+                            <td>Sep 16, 2026</td>
+                            <td>2</td>
+                            <td>Emergency</td>
+
+                            <td>
+                                <span class="status rejected">
+                                    Rejected
+                                </span>
+                            </td>
+
+                            <td>
+                                <div class="actions">
+                                    <button class="view" title="View">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Pagination -->
+            <div class="pagination">
+
+                <p>Showing 1 to 5 of 48 requests</p>
+
+                <div class="pages">
+                    <button class="page-arrow">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button class="page active">1</button>
+                    <button class="page">2</button>
+                    <button class="page">3</button>
+                    <button class="page">4</button>
+
+                    <button class="page-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../shared/js/hrms-store.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

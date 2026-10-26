@@ -1,0 +1,286 @@
+/* ==========================================================================
+   HRMS Common Styles: Modals, Toasts, Responsive Navbar & Dark Theme
+   ========================================================================== */
+
+/* Dark Theme Overrides */
+body.dark-theme {
+    --background: #0b1315 !important;
+    --white: #152220 !important;
+    --dark: #f1f5f9 !important;
+    --gray: #94a3b8 !important;
+    --light-green: #1a382c !important;
+    background-color: #0b1315 !important;
+    color: #e2e8f0 !important;
+}
+
+body.dark-theme .sidebar {
+    background: #111e1b !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-theme .topbar,
+body.dark-theme .stat-card,
+body.dark-theme .content-card,
+body.dark-theme .employees-card,
+body.dark-theme .form-card,
+body.dark-theme .chart-card,
+body.dark-theme .table-container,
+body.dark-theme table {
+    background-color: #152220 !important;
+    color: #e2e8f0 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-theme table th {
+    background-color: #1c2d2a !important;
+    color: #94a3b8 !important;
+}
+
+body.dark-theme table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-theme .search-box,
+body.dark-theme .filter-bar select,
+body.dark-theme .filter-bar input,
+body.dark-theme .form-group input,
+body.dark-theme .form-group select {
+    background-color: #1c2d2a !important;
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Toast Notification System */
+.toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.hrms-toast {
+    min-width: 280px;
+    max-width: 420px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    pointer-events: auto;
+    animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: all 0.3s ease;
+}
+
+.hrms-toast.toast-success {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.hrms-toast.toast-danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.hrms-toast.toast-info {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.hrms-toast.toast-warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.hrms-toast.fade-out {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Modal System */
+.hrms-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    padding: 20px;
+}
+
+.hrms-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hrms-modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    transform: translateY(20px) scale(0.96);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+body.dark-theme .hrms-modal-card {
+    background: #172421;
+    color: #f1f5f9;
+}
+
+.hrms-modal-backdrop.active .hrms-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+.hrms-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body.dark-theme .hrms-modal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.hrms-modal-header h3 {
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.dark-theme .hrms-modal-header h3 {
+    color: #f1f5f9;
+}
+
+.hrms-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #64748b;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.hrms-modal-close:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+body.dark-theme .hrms-modal-close:hover {
+    background: #233733;
+    color: #ffffff;
+}
+
+.hrms-modal-body {
+    padding: 24px;
+}
+
+.hrms-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+body.dark-theme .hrms-modal-footer {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modal Action Buttons */
+.modal-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.modal-btn-cancel {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.modal-btn-cancel:hover {
+    background: #e2e8f0;
+}
+
+.modal-btn-primary {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.modal-btn-primary:hover {
+    background: #15803d;
+}
+
+.modal-btn-danger {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.modal-btn-danger:hover {
+    background: #dc2626;
+}
+
+/* Input error styles */
+.input-error {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Quick Action Card Cursor & Click Feedback */
+.btn-primary, .btn-secondary, button, .menu-link, .nav-item {
+    cursor: pointer;
+    user-select: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}

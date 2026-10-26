@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Employee - HRMS</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../shared/css/common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================================
+         SIDEBAR
+    ======================================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <h2>HRMS</h2>
+
+            <span>Management System</span>
+
+        </div>
+
+
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <nav>
+
+            <a href="../dashboard/index.html" class="menu-link">
+                <i class="fas fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="../employees/index.html" class="menu-link">
+                <i class="fas fa-users"></i>
+                <span>Employees</span>
+            </a>
+
+            <a href="index.html" class="menu-link active">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Employee</span>
+            </a>
+
+            <a href="../attendance/index.html" class="menu-link">
+                <i class="fas fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="../leave-management/index.html" class="menu-link">
+                <i class="fas fa-plane-departure"></i>
+                <span>Leave Management</span>
+            </a>
+
+            <a href="../payroll/index.html" class="menu-link">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Payroll</span>
+            </a>
+
+            <a href="../settings/index.html" class="menu-link">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="admin-info">
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <i class="fas fa-ellipsis-h"></i>
+
+            </div>
+
+
+            <a href="../login/index.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ======================================
+         MAIN CONTENT
+    ======================================= -->
+
+    <main class="main">
+
+
+        <header class="topbar">
+
+            <div class="welcome">
+
+                <h1>Add Employee</h1>
+
+                <p>
+                    Fill in the details below to onboard a new employee.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <a href="../employees/index.html" class="btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Employees
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ======================================
+             FORM
+        ======================================= -->
+
+        <form class="form-card" id="addEmployeeForm" novalidate>
+
+
+            <!-- PHOTO -->
+
+            <div class="form-section">
+
+                <div class="photo-upload">
+
+                    <div class="photo-circle" id="avatarPreviewContainer">
+                        <i class="fas fa-user" id="defaultAvatarIcon"></i>
+                        <img id="avatarImg" src="" alt="Preview" style="display: none; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+
+                    <label class="upload-btn">
+                        <i class="fas fa-camera"></i>
+                        Upload Photo
+                        <input type="file" id="photoInput" accept="image/*" hidden>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERSONAL INFO -->
+
+            <div class="form-section">
+
+                <h2><i class="fas fa-id-card"></i> Personal Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" placeholder="e.g. Ananya Patel" required>
+                        <div class="error-message" id="errFullName"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                        <div class="error-message" id="errPhone"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="ananya.patel@hrms.com" required>
+                        <div class="error-message" id="errEmail"></div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Street, City, State, PIN">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- JOB INFO -->
+
+            <div class="form-section">
+
+                <h2><i class="fas fa-briefcase"></i> Job Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="empId">Employee ID</label>
+                        <input type="text" id="empId" placeholder="EMP00129" readonly style="background: #f1f5f9; cursor: not-allowed;">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <select id="department" required>
+                            <option value="">Select department</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Operations">Operations</option>
+                        </select>
+                        <div class="error-message" id="errDepartment"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Position / Designation *</label>
+                        <input type="text" id="position" placeholder="e.g. Frontend Engineer" required>
+                        <div class="error-message" id="errPosition"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employmentType">Employment Type</label>
+                        <select id="employmentType">
+                            <option value="Full-time">Full-time</option>
+                            <option value="Part-time">Part-time</option>
+                            <option value="Contract">Contract</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="joiningDate">Joining Date *</label>
+                        <input type="date" id="joiningDate" required>
+                        <div class="error-message" id="errJoiningDate"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manager">Reporting Manager</label>
+                        <input type="text" id="manager" placeholder="e.g. Rahul Sharma">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SALARY INFO -->
+
+            <div class="form-section">
+
+                <h2><i class="fas fa-money-bill-wave"></i> Salary Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="basicSalary">Basic Salary (₹) *</label>
+                        <input type="number" id="basicSalary" placeholder="e.g. 60000" min="10000" required>
+                        <div class="error-message" id="errSalary"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="allowances">Allowances (₹)</label>
+                        <input type="number" id="allowances" placeholder="e.g. 8000" value="8000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payCycle">Pay Cycle</label>
+                        <select id="payCycle">
+                            <option value="Monthly">Monthly</option>
+                            <option value="Bi-weekly">Bi-weekly</option>
+                            <option value="Weekly">Weekly</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="form-actions">
+
+                <button type="reset" class="btn-secondary" id="resetBtn">Cancel</button>
+
+                <button type="submit" class="btn-primary" id="saveBtn">
+                    <i class="fas fa-check"></i>
+                    Save Employee
+                </button>
+
+            </div>
+
+        </form>
+
+
+    </main>
+
+    <script src="../shared/js/hrms-store.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

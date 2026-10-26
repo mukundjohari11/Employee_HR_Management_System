@@ -15,6 +15,7 @@
     >
 
     <!-- CSS -->
+    <link rel="stylesheet" href="../shared/css/common.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -102,7 +103,7 @@
             </div>
 
 
-            <a href="../login%20page/index.html" class="logout">
+            <a href="../login/index.html" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
             </a>
@@ -135,9 +136,14 @@
 
             <div class="top-actions">
 
-                <div class="date">
+                <button class="btn-primary" id="openMarkModal" style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-user-check"></i>
+                    Mark Attendance
+                </button>
+
+                <div class="date" id="datePickerTrigger">
                     <i class="far fa-calendar"></i>
-                    <span>21 September 2026</span>
+                    <span id="currentDateDisplay">21 September 2026</span>
                 </div>
 
                 <button class="notification">
@@ -261,17 +267,17 @@
 
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search employees by name or ID...">
+                <input type="text" id="attendanceSearch" placeholder="Search employees by name or ID...">
             </div>
 
-            <input type="date" value="2026-09-21">
+            <input type="date" id="attendanceDate">
 
-            <select>
-                <option>All Status</option>
-                <option>Present</option>
-                <option>Absent</option>
-                <option>Late</option>
-                <option>On Leave</option>
+            <select id="attendanceStatusFilter">
+                <option value="All">All Status</option>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+                <option value="Late">Late</option>
+                <option value="On Leave">On Leave</option>
             </select>
 
         </section>
@@ -290,15 +296,16 @@
 
                     <h2>Today's Attendance</h2>
 
-                    <p>
-                        21 September 2026
+                    <p id="attendanceSubtext">
+                        Showing attendance records
                     </p>
 
                 </div>
 
-                <a href="#">
+                <button type="button" id="exportAttendanceBtn" style="background: none; border: none; color: #16a34a; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <i class="fas fa-download"></i>
                     Export Report
-                </a>
+                </button>
 
             </div>
 
@@ -557,6 +564,8 @@
 
     </main>
 
+    <script src="../shared/js/hrms-store.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
