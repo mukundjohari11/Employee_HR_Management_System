@@ -8,16 +8,16 @@ const HRMS_STORE = (function () {
 
     const defaultData = {
         currentUser: {
-            name: 'Admin',
-            role: 'Administrator',
-            email: 'admin@hrms.com',
-            avatar: 'AD'
+            name: 'Manager',
+            role: 'HR Manager',
+            email: 'manager@company.com',
+            avatar: 'MG'
         },
         settings: {
-            companyName: 'PulseHR Tech Solutions',
-            hrEmail: 'hr@pulsehr.com',
-            phone: '+91 98765 43210',
-            address: 'Tech Park, Sector 62, Noida, India',
+            companyName: 'TechNova Solutions',
+            hrEmail: 'hr@technova.com',
+            phone: '+91 91234 56780',
+            address: 'Business Park, Sector 18, Noida, India',
             currency: '₹',
             theme: 'light',
             emailAlerts: true,
@@ -25,101 +25,101 @@ const HRMS_STORE = (function () {
         },
         employees: [
             {
-                id: 'EMP00124',
-                code: 'EMP001',
-                name: 'Rahul Sharma',
-                avatar: 'RS',
-                email: 'rahul.sharma@hrms.com',
-                phone: '+91 98765 01001',
-                department: 'Technology',
-                position: 'Software Developer',
-                joiningDate: '2026-09-12',
+                id: 'EMP00224',
+                code: 'EMP101',
+                name: 'Arjun Verma',
+                avatar: 'AV',
+                email: 'arjun.verma@company.com',
+                phone: '+91 91234 01001',
+                department: 'Development',
+                position: 'Frontend Developer',
+                joiningDate: '2026-10-12',
                 status: 'Active',
-                salary: 75000,
-                allowances: 12000,
-                deductions: 5500
+                salary: 82000,
+                allowances: 14000,
+                deductions: 6000
             },
             {
-                id: 'EMP00125',
-                code: 'EMP002',
-                name: 'Priya Singh',
-                avatar: 'PS',
-                email: 'priya.singh@hrms.com',
-                phone: '+91 98765 01002',
+                id: 'EMP00225',
+                code: 'EMP102',
+                name: 'Neha Gupta',
+                avatar: 'NG',
+                email: 'neha.gupta@company.com',
+                phone: '+91 91234 01002',
                 department: 'Human Resources',
-                position: 'HR Manager',
-                joiningDate: '2026-09-10',
+                position: 'HR Executive',
+                joiningDate: '2026-10-10',
                 status: 'Active',
-                salary: 62000,
-                allowances: 9500,
-                deductions: 4200
+                salary: 65000,
+                allowances: 10000,
+                deductions: 4500
             },
             {
-                id: 'EMP00126',
-                code: 'EMP003',
-                name: 'Amit Kumar',
-                avatar: 'AK',
-                email: 'amit.kumar@hrms.com',
-                phone: '+91 98765 01003',
+                id: 'EMP00226',
+                code: 'EMP103',
+                name: 'Rohan Mehta',
+                avatar: 'RM',
+                email: 'rohan.mehta@company.com',
+                phone: '+91 91234 01003',
                 department: 'Finance',
-                position: 'Accountant',
-                joiningDate: '2026-09-08',
+                position: 'Financial Analyst',
+                joiningDate: '2026-10-08',
                 status: 'Active',
-                salary: 58000,
-                allowances: 8000,
-                deductions: 3800
+                salary: 60000,
+                allowances: 9000,
+                deductions: 4000
             },
             {
-                id: 'EMP00127',
-                code: 'EMP004',
-                name: 'Sneha Kapoor',
-                avatar: 'SK',
-                email: 'sneha.kapoor@hrms.com',
-                phone: '+91 98765 01004',
+                id: 'EMP00227',
+                code: 'EMP104',
+                name: 'Kavya Malhotra',
+                avatar: 'KM',
+                email: 'kavya.malhotra@company.com',
+                phone: '+91 91234 01004',
                 department: 'Marketing',
-                position: 'Marketing Executive',
-                joiningDate: '2026-09-05',
+                position: 'Marketing Manager',
+                joiningDate: '2026-10-05',
                 status: 'Active',
-                salary: 55000,
-                allowances: 7500,
-                deductions: 3200
+                salary: 57000,
+                allowances: 8000,
+                deductions: 3500
             },
             {
-                id: 'EMP00128',
-                code: 'EMP005',
-                name: 'Vikram Joshi',
-                avatar: 'VJ',
-                email: 'vikram.joshi@hrms.com',
-                phone: '+91 98765 01005',
+                id: 'EMP00228',
+                code: 'EMP105',
+                name: 'Aditya Mishra',
+                avatar: 'AM',
+                email: 'aditya.mishra@company.com',
+                phone: '+91 91234 01005',
                 department: 'Operations',
-                position: 'Operations Lead',
-                joiningDate: '2026-08-20',
+                position: 'Operations Manager',
+                joiningDate: '2026-09-20',
                 status: 'Active',
-                salary: 51000,
-                allowances: 6500,
-                deductions: 2900
+                salary: 53000,
+                allowances: 7000,
+                deductions: 3000
             }
         ],
         attendance: [
-            { id: 1, empId: 'EMP00124', name: 'Rahul Sharma', department: 'Technology', checkIn: '09:15 AM', checkOut: '06:15 PM', hours: '9h 00m', status: 'Present', date: '2026-09-21' },
-            { id: 2, empId: 'EMP00125', name: 'Priya Singh', department: 'Human Resources', checkIn: '09:05 AM', checkOut: '06:00 PM', hours: '8h 55m', status: 'Present', date: '2026-09-21' },
-            { id: 3, empId: 'EMP00126', name: 'Amit Kumar', department: 'Finance', checkIn: '09:45 AM', checkOut: '06:30 PM', hours: '8h 45m', status: 'Late', date: '2026-09-21' },
-            { id: 4, empId: 'EMP00127', name: 'Sneha Kapoor', department: 'Marketing', checkIn: '--:--', checkOut: '--:--', hours: '0h 00m', status: 'Absent', date: '2026-09-21' },
-            { id: 5, empId: 'EMP00128', name: 'Vikram Joshi', department: 'Operations', checkIn: '09:10 AM', checkOut: '06:10 PM', hours: '9h 00m', status: 'Present', date: '2026-09-21' }
+            { id: 11, empId: 'EMP00224', name: 'Arjun Verma', department: 'Development', checkIn: '09:10 AM', checkOut: '06:10 PM', hours: '9h 00m', status: 'Present', date: '2026-10-21' },
+            { id: 12, empId: 'EMP00225', name: 'Neha Gupta', department: 'Human Resources', checkIn: '09:00 AM', checkOut: '06:00 PM', hours: '9h 00m', status: 'Present', date: '2026-10-21' },
+            { id: 13, empId: 'EMP00226', name: 'Rohan Mehta', department: 'Finance', checkIn: '09:40 AM', checkOut: '06:20 PM', hours: '8h 40m', status: 'Late', date: '2026-10-21' },
+            { id: 14, empId: 'EMP00227', name: 'Kavya Malhotra', department: 'Marketing', checkIn: '--:--', checkOut: '--:--', hours: '0h 00m', status: 'Absent', date: '2026-10-21' },
+            { id: 15, empId: 'EMP00228', name: 'Aditya Mishra', department: 'Operations', checkIn: '09:05 AM', checkOut: '06:05 PM', hours: '9h 00m', status: 'Present', date: '2026-10-21' }
         ],
         leaves: [
-            { id: 'LV001', empId: 'EMP00124', name: 'Rahul Sharma', avatar: 'RS', department: 'Technology', leaveType: 'Casual Leave', from: '2026-09-22', to: '2026-09-23', days: 2, reason: 'Personal work', status: 'Pending' },
-            { id: 'LV002', empId: 'EMP00125', name: 'Priya Singh', avatar: 'PS', department: 'Human Resources', leaveType: 'Sick Leave', from: '2026-09-20', to: '2026-09-21', days: 2, reason: 'Viral Fever', status: 'Approved' },
-            { id: 'LV003', empId: 'EMP00126', name: 'Amit Kumar', avatar: 'AK', department: 'Finance', leaveType: 'Earned Leave', from: '2026-09-28', to: '2026-09-30', days: 3, reason: 'Family travel', status: 'Pending' },
-            { id: 'LV004', empId: 'EMP00127', name: 'Sneha Kapoor', avatar: 'SK', department: 'Marketing', leaveType: 'Emergency Leave', from: '2026-09-15', to: '2026-09-15', days: 1, reason: 'Medical checkup', status: 'Rejected' },
-            { id: 'LV005', empId: 'EMP00128', name: 'Vikram Joshi', avatar: 'VJ', department: 'Operations', leaveType: 'Casual Leave', from: '2026-09-25', to: '2026-09-26', days: 2, reason: 'Relocation', status: 'Approved' }
+            { id: 'LV101', empId: 'EMP00224', name: 'Arjun Verma', avatar: 'AV', department: 'Development', leaveType: 'Casual Leave', from: '2026-10-22', to: '2026-10-23', days: 2, reason: 'Personal work', status: 'Pending' },
+            { id: 'LV102', empId: 'EMP00225', name: 'Neha Gupta', avatar: 'NG', department: 'Human Resources', leaveType: 'Sick Leave', from: '2026-10-20', to: '2026-10-21', days: 2, reason: 'Health issue', status: 'Approved' },
+            { id: 'LV103', empId: 'EMP00226', name: 'Rohan Mehta', avatar: 'RM', department: 'Finance', leaveType: 'Earned Leave', from: '2026-10-28', to: '2026-10-30', days: 3, reason: 'Family function', status: 'Pending' },
+            { id: 'LV104', empId: 'EMP00227', name: 'Kavya Malhotra', avatar: 'KM', department: 'Marketing', leaveType: 'Emergency Leave', from: '2026-10-15', to: '2026-10-15', days: 1, reason: 'Personal appointment', status: 'Rejected' },
+            { id: 'LV105', empId: 'EMP00228', name: 'Aditya Mishra', avatar: 'AM', department: 'Operations', leaveType: 'Casual Leave', from: '2026-10-25', to: '2026-10-26', days: 2, reason: 'Relocation', status: 'Approved' }
         ],
         payroll: [
-            { empId: 'EMP00124', name: 'Rahul Sharma', avatar: 'RS', department: 'Technology', basic: 75000, allowances: 12000, deductions: 5500, net: 81500, status: 'Processed', month: 'September 2026' },
-            { empId: 'EMP00125', name: 'Priya Singh', avatar: 'PS', department: 'Human Resources', basic: 62000, allowances: 9500, deductions: 4200, net: 67300, status: 'Processed', month: 'September 2026' },
-            { empId: 'EMP00126', name: 'Amit Kumar', avatar: 'AK', department: 'Finance', basic: 58000, allowances: 8000, deductions: 3800, net: 62200, status: 'Pending', month: 'September 2026' },
-            { empId: 'EMP00127', name: 'Sneha Kapoor', avatar: 'SK', department: 'Marketing', basic: 55000, allowances: 7500, deductions: 3200, net: 59300, status: 'Processed', month: 'September 2026' },
-            { empId: 'EMP00128', name: 'Vikram Joshi', avatar: 'VJ', department: 'Operations', basic: 51000, allowances: 6500, deductions: 2900, net: 54600, status: 'Pending', month: 'September 2026' }
+            { empId: 'EMP00224', name: 'Arjun Verma', avatar: 'AV', department: 'Development', basic: 82000, allowances: 14000, deductions: 6000, net: 90000, status: 'Processed', month: 'October 2026' },
+            { empId: 'EMP00225', name: 'Neha Gupta', avatar: 'NG', department: 'Human Resources', basic: 65000, allowances: 10000, deductions: 4500, net: 70500, status: 'Processed', month: 'October 2026' },
+            { empId: 'EMP00226', name: 'Rohan Mehta', avatar: 'RM', department: 'Finance', basic: 60000, allowances: 9000, deductions: 4000, net: 65000, status: 'Pending', month: 'October 2026' },
+            { empId: 'EMP00227', name: 'Kavya Malhotra', avatar: 'KM', department: 'Marketing', basic: 57000, allowances: 8000, deductions: 3500, net: 61500, status: 'Processed', month: 'October 2026' },
+            { empId: 'EMP00228', name: 'Aditya Mishra', avatar: 'AM', department: 'Operations', basic: 53000, allowances: 7000, deductions: 3000, net: 57000, status: 'Pending', month: 'October 2026' }
         ]
     };
 
@@ -158,12 +158,12 @@ const HRMS_STORE = (function () {
                 name: emp.name,
                 avatar: emp.avatar || emp.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase(),
                 department: emp.department,
-                basic: Number(emp.salary) || 50000,
-                allowances: 8000,
-                deductions: 3500,
-                net: (Number(emp.salary) || 50000) + 8000 - 3500,
+                basic: Number(emp.salary) || 55000,
+                allowances: 9000,
+                deductions: 4000,
+                net: (Number(emp.salary) || 55000) + 9000 - 4000,
                 status: 'Pending',
-                month: 'September 2026'
+                month: 'October 2026'
             });
             // Also add attendance entry
             data.attendance.unshift({
@@ -171,7 +171,7 @@ const HRMS_STORE = (function () {
                 empId: emp.id,
                 name: emp.name,
                 department: emp.department,
-                checkIn: '09:00 AM',
+                checkIn: '09:15 AM',
                 checkOut: '--:--',
                 hours: 'In Progress',
                 status: 'Present',
@@ -206,8 +206,8 @@ const HRMS_STORE = (function () {
                     empId: empId,
                     name: emp ? emp.name : 'Employee',
                     department: emp ? emp.department : 'General',
-                    checkIn: checkIn || '09:00 AM',
-                    checkOut: checkOut || '06:00 PM',
+                    checkIn: checkIn || '09:15 AM',
+                    checkOut: checkOut || '06:15 PM',
                     hours: status === 'Absent' ? '0h 00m' : '8h 00m',
                     status: status,
                     date: new Date().toISOString().split('T')[0]
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.setAttribute('data-name', p.name.toLowerCase());
             tr.setAttribute('data-dept', p.department);
             tr.setAttribute('data-status', p.status);
-            tr.setAttribute('data-month', p.month || 'September 2026');
+            tr.setAttribute('data-month', p.month || 'October 2026');
 
             const statusClass = p.status.toLowerCase();
             const avatar = p.avatar || p.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
@@ -583,7 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div><strong style="color: #64748b; font-size: 12px; display: block;">EMPLOYEE</strong> ${p.name}</div>
                             <div><strong style="color: #64748b; font-size: 12px; display: block;">EMPLOYEE ID</strong> ${p.empId}</div>
                             <div><strong style="color: #64748b; font-size: 12px; display: block;">DEPARTMENT</strong> ${p.department}</div>
-                            <div><strong style="color: #64748b; font-size: 12px; display: block;">PAY PERIOD</strong> ${p.month || 'September 2026'}</div>
+                            <div><strong style="color: #64748b; font-size: 12px; display: block;">PAY PERIOD</strong> ${p.month || 'October 2026'}</div>
                         </div>
 
                         <table style="width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14px;">
@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 contentHtml: `
                     <div style="text-align: center; padding: 10px 0 20px;">
                         <p style="color: #64748b; font-size: 14px; margin-bottom: 16px;">
-                            You are about to process monthly payroll disbursements for <strong>September 2026</strong>.
+                            You are about to process monthly payroll disbursements for <strong>October 2026</strong>.
                         </p>
                         <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 14px; padding: 20px; display: inline-block; width: 100%;">
                             <span style="color: #166534; font-size: 13px; font-weight: 600; display: block; margin-bottom: 6px;">TOTAL PENDING DISBURSEMENT</span>
@@ -686,3 +686,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render
     renderPayroll();
 });
+  
