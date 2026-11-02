@@ -10,14 +10,14 @@ const HRMS_STORE = (function () {
         currentUser: {
             name: 'Admin',
             role: 'Administrator',
-            email: 'admin@hrms.com',
+            email: 'admin@novapeople.com',
             avatar: 'AD'
         },
         settings: {
-            companyName: 'PulseHR Tech Solutions',
-            hrEmail: 'hr@pulsehr.com',
-            phone: '+91 98765 43210',
-            address: 'Tech Park, Sector 62, Noida, India',
+            companyName: 'NovaPeople HR Solutions',
+            hrEmail: 'people@novapeople.com',
+            phone: '+91 98123 45670',
+            address: 'Business Hub, Sector 18, Noida, India',
             currency: '₹',
             theme: 'light',
             emailAlerts: true,
@@ -25,101 +25,101 @@ const HRMS_STORE = (function () {
         },
         employees: [
             {
-                id: 'EMP00124',
-                code: 'EMP001',
-                name: 'Rahul Sharma',
-                avatar: 'RS',
-                email: 'rahul.sharma@hrms.com',
-                phone: '+91 98765 01001',
-                department: 'Technology',
-                position: 'Software Developer',
-                joiningDate: '2026-09-12',
+                id: 'STAFF00241',
+                code: 'STAFF001',
+                name: 'Arjun Mehta',
+                avatar: 'AM',
+                email: 'arjun.mehta@novapeople.com',
+                phone: '+91 98123 45001',
+                department: 'Engineering',
+                position: 'Web Developer',
+                joiningDate: '2026-10-12',
                 status: 'Active',
-                salary: 75000,
-                allowances: 12000,
-                deductions: 5500
+                salary: 78000,
+                allowances: 13000,
+                deductions: 6000
             },
             {
-                id: 'EMP00125',
-                code: 'EMP002',
-                name: 'Priya Singh',
-                avatar: 'PS',
-                email: 'priya.singh@hrms.com',
-                phone: '+91 98765 01002',
-                department: 'Human Resources',
-                position: 'HR Manager',
-                joiningDate: '2026-09-10',
+                id: 'STAFF00242',
+                code: 'STAFF002',
+                name: 'Kavya Verma',
+                avatar: 'KV',
+                email: 'kavya.verma@novapeople.com',
+                phone: '+91 98123 45002',
+                department: 'People Operations',
+                position: 'People Manager',
+                joiningDate: '2026-10-10',
                 status: 'Active',
-                salary: 62000,
-                allowances: 9500,
-                deductions: 4200
+                salary: 64000,
+                allowances: 10000,
+                deductions: 4500
             },
             {
-                id: 'EMP00126',
-                code: 'EMP003',
-                name: 'Amit Kumar',
-                avatar: 'AK',
-                email: 'amit.kumar@hrms.com',
-                phone: '+91 98765 01003',
-                department: 'Finance',
-                position: 'Accountant',
-                joiningDate: '2026-09-08',
+                id: 'STAFF00243',
+                code: 'STAFF003',
+                name: 'Rohan Gupta',
+                avatar: 'RG',
+                email: 'rohan.gupta@novapeople.com',
+                phone: '+91 98123 45003',
+                department: 'Accounts',
+                position: 'Finance Executive',
+                joiningDate: '2026-10-08',
                 status: 'Active',
-                salary: 58000,
-                allowances: 8000,
-                deductions: 3800
+                salary: 60000,
+                allowances: 8500,
+                deductions: 4000
             },
             {
-                id: 'EMP00127',
-                code: 'EMP004',
-                name: 'Sneha Kapoor',
-                avatar: 'SK',
-                email: 'sneha.kapoor@hrms.com',
-                phone: '+91 98765 01004',
-                department: 'Marketing',
-                position: 'Marketing Executive',
-                joiningDate: '2026-09-05',
+                id: 'STAFF00244',
+                code: 'STAFF004',
+                name: 'Isha Malhotra',
+                avatar: 'IM',
+                email: 'isha.malhotra@novapeople.com',
+                phone: '+91 98123 45004',
+                department: 'Communications',
+                position: 'Content Executive',
+                joiningDate: '2026-10-05',
                 status: 'Active',
-                salary: 55000,
-                allowances: 7500,
-                deductions: 3200
+                salary: 57000,
+                allowances: 8500,
+                deductions: 4000
             },
             {
-                id: 'EMP00128',
-                code: 'EMP005',
-                name: 'Vikram Joshi',
-                avatar: 'VJ',
-                email: 'vikram.joshi@hrms.com',
-                phone: '+91 98765 01005',
-                department: 'Operations',
-                position: 'Operations Lead',
-                joiningDate: '2026-08-20',
+                id: 'STAFF00245',
+                code: 'STAFF005',
+                name: 'Dev Patel',
+                avatar: 'DP',
+                email: 'dev.patel@novapeople.com',
+                phone: '+91 98123 45005',
+                department: 'Administration',
+                position: 'Admin Lead',
+                joiningDate: '2026-10-20',
                 status: 'Active',
-                salary: 51000,
-                allowances: 6500,
-                deductions: 2900
+                salary: 53000,
+                allowances: 7000,
+                deductions: 3000
             }
         ],
         attendance: [
-            { id: 1, empId: 'EMP00124', name: 'Rahul Sharma', department: 'Technology', checkIn: '09:15 AM', checkOut: '06:15 PM', hours: '9h 00m', status: 'Present', date: '2026-09-21' },
-            { id: 2, empId: 'EMP00125', name: 'Priya Singh', department: 'Human Resources', checkIn: '09:05 AM', checkOut: '06:00 PM', hours: '8h 55m', status: 'Present', date: '2026-09-21' },
-            { id: 3, empId: 'EMP00126', name: 'Amit Kumar', department: 'Finance', checkIn: '09:45 AM', checkOut: '06:30 PM', hours: '8h 45m', status: 'Late', date: '2026-09-21' },
-            { id: 4, empId: 'EMP00127', name: 'Sneha Kapoor', department: 'Marketing', checkIn: '--:--', checkOut: '--:--', hours: '0h 00m', status: 'Absent', date: '2026-09-21' },
-            { id: 5, empId: 'EMP00128', name: 'Vikram Joshi', department: 'Operations', checkIn: '09:10 AM', checkOut: '06:10 PM', hours: '9h 00m', status: 'Present', date: '2026-09-21' }
+            { id: 1, empId: 'STAFF00241', name: 'Arjun Mehta', department: 'Engineering', checkIn: '09:15 AM', checkOut: '06:15 PM', hours: '9h 00m', status: 'Present', date: '2026-10-21' },
+            { id: 2, empId: 'STAFF00242', name: 'Kavya Verma', department: 'People Operations', checkIn: '09:05 AM', checkOut: '06:00 PM', hours: '8h 55m', status: 'Present', date: '2026-10-21' },
+            { id: 3, empId: 'STAFF00243', name: 'Rohan Gupta', department: 'Accounts', checkIn: '09:45 AM', checkOut: '06:30 PM', hours: '8h 45m', status: 'Late', date: '2026-10-21' },
+            { id: 4, empId: 'STAFF00244', name: 'Isha Malhotra', department: 'Communications', checkIn: '--:--', checkOut: '--:--', hours: '0h 00m', status: 'Absent', date: '2026-10-21' },
+            { id: 5, empId: 'STAFF00245', name: 'Dev Patel', department: 'Administration', checkIn: '09:10 AM', checkOut: '06:10 PM', hours: '9h 00m', status: 'Present', date: '2026-10-21' }
         ],
         leaves: [
-            { id: 'LV001', empId: 'EMP00124', name: 'Rahul Sharma', avatar: 'RS', department: 'Technology', leaveType: 'Casual Leave', from: '2026-09-22', to: '2026-09-23', days: 2, reason: 'Personal work', status: 'Pending' },
-            { id: 'LV002', empId: 'EMP00125', name: 'Priya Singh', avatar: 'PS', department: 'Human Resources', leaveType: 'Sick Leave', from: '2026-09-20', to: '2026-09-21', days: 2, reason: 'Viral Fever', status: 'Approved' },
-            { id: 'LV003', empId: 'EMP00126', name: 'Amit Kumar', avatar: 'AK', department: 'Finance', leaveType: 'Earned Leave', from: '2026-09-28', to: '2026-09-30', days: 3, reason: 'Family travel', status: 'Pending' },
-            { id: 'LV004', empId: 'EMP00127', name: 'Sneha Kapoor', avatar: 'SK', department: 'Marketing', leaveType: 'Emergency Leave', from: '2026-09-15', to: '2026-09-15', days: 1, reason: 'Medical checkup', status: 'Rejected' },
-            { id: 'LV005', empId: 'EMP00128', name: 'Vikram Joshi', avatar: 'VJ', department: 'Operations', leaveType: 'Casual Leave', from: '2026-09-25', to: '2026-09-26', days: 2, reason: 'Relocation', status: 'Approved' }
+            { id: 'LV101', empId: 'STAFF00241', name: 'Arjun Mehta', avatar: 'AM', department: 'Engineering', leaveType: 'Casual Leave', from: '2026-10-22', to: '2026-10-23', days: 2, reason: 'Personal work', status: 'Pending' },
+            { id: 'LV102', empId: 'STAFF00242', name: 'Kavya Verma', avatar: 'KV', department: 'People Operations', leaveType: 'Sick Leave', from: '2026-10-20', to: '2026-10-21', days: 2, reason: 'Viral Fever', status: 'Approved' },
+            { id: 'LV103', empId: 'STAFF00243', name: 'Rohan Gupta', avatar: 'RG', department: 'Accounts', leaveType: 'Earned Leave', from: '2026-10-28', to: '2026-10-30', days: 3, reason: 'Family travel', status: 'Pending' },
+            { id: 'LV104', empId: 'STAFF00244', name: 'Isha Malhotra', avatar: 'IM', department: 'Communications', leaveType: 'Emergency Leave', from: '2026-10-15', to: '2026-10-15', days: 1, reason: 'Medical checkup', status: 'Rejected' },
+            { id: 'LV105', empId: 'STAFF00245', name: 'Dev Patel', avatar: 'DP', department: 'Administration', leaveType: 'Casual Leave', from: '2026-10-25', to: '2026-10-26', days: 2, reason: 'Relocation', status: 'Approved' }
         ],
         payroll: [
-            { empId: 'EMP00124', name: 'Rahul Sharma', avatar: 'RS', department: 'Technology', basic: 75000, allowances: 12000, deductions: 5500, net: 81500, status: 'Processed', month: 'September 2026' },
-            { empId: 'EMP00125', name: 'Priya Singh', avatar: 'PS', department: 'Human Resources', basic: 62000, allowances: 9500, deductions: 4200, net: 67300, status: 'Processed', month: 'September 2026' },
-            { empId: 'EMP00126', name: 'Amit Kumar', avatar: 'AK', department: 'Finance', basic: 58000, allowances: 8000, deductions: 3800, net: 62200, status: 'Pending', month: 'September 2026' },
-            { empId: 'EMP00127', name: 'Sneha Kapoor', avatar: 'SK', department: 'Marketing', basic: 55000, allowances: 7500, deductions: 3200, net: 59300, status: 'Processed', month: 'September 2026' },
-            { empId: 'EMP00128', name: 'Vikram Joshi', avatar: 'VJ', department: 'Operations', basic: 51000, allowances: 6500, deductions: 2900, net: 54600, status: 'Pending', month: 'September 2026' }
+            { empId: 'STAFF00241', name: 'Arjun Mehta', avatar: 'AM', department: 'Engineering', basic: 78000, allowances: 13000, deductions: 6000, net: 85000, status: 'Processed', month: 'October 2026' },
+            { empId: 'STAFF00242', name: 'Kavya Verma', avatar: 'KV', department: 'People Operations', basic: 64000, allowances: 10000, deductions: 4500, net: 69500, status: 'Processed', month: 'October 2026' },
+            { empId: 'STAFF00243', name: 'Rohan Gupta', avatar: 'RG', department: 'Accounts', basic: 60000, allowances: 8500, deductions: 4000, net: 64500, status: 'Pending', month: 'October 2026' },
+            { empId: 'STAFF00244', name: 'Isha Malhotra', avatar: 'IM', department: 'Communications', basic: 57000, allowances: 8000, deductions: 3500, net: 61500, status: 'Processed', month: 'October 2026' },
+            { empId: 'STAFF00245', name: 'Dev Patel', avatar: 'DP', department: 'Administration', basic: 53000, allowances: 7000, deductions: 3000, net: 57000, status: 'Pending', month: 'October 2026' }
         ]
     };
 
@@ -158,12 +158,12 @@ const HRMS_STORE = (function () {
                 name: emp.name,
                 avatar: emp.avatar || emp.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase(),
                 department: emp.department,
-                basic: Number(emp.salary) || 50000,
-                allowances: 8000,
+                basic: Number(emp.salary) || 52000,
+                allowances: 8500,
                 deductions: 3500,
-                net: (Number(emp.salary) || 50000) + 8000 - 3500,
+                net: (Number(emp.salary) || 52000) + 8500 - 4000,
                 status: 'Pending',
-                month: 'September 2026'
+                month: 'October 2026'
             });
             // Also add attendance entry
             data.attendance.unshift({
@@ -429,11 +429,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadFormValues() {
         const settings = HRMS_STORE.getSettings();
 
-        if (companyNameInput) companyNameInput.value = settings.companyName || 'PulseHR Tech Solutions';
-        if (hrEmailInput) hrEmailInput.value = settings.hrEmail || 'hr@pulsehr.com';
-        if (companyPhoneInput) companyPhoneInput.value = settings.phone || '+91 98765 43210';
+        if (companyNameInput) companyNameInput.value = settings.companyName || 'NovaPeople HR Solutions';
+        if (hrEmailInput) hrEmailInput.value = settings.hrEmail || 'people@novapeople.com';
+        if (companyPhoneInput) companyPhoneInput.value = settings.phone || '+91 98123 45670';
         if (currencySelect) currencySelect.value = settings.currency || '₹';
-        if (addressInput) addressInput.value = settings.address || 'Tech Park, Sector 62, Noida, India';
+        if (addressInput) addressInput.value = settings.address || 'Business Hub, Sector 18, Noida, India';
 
         if (themeToggle) {
             themeToggle.checked = settings.theme === 'dark';
@@ -498,10 +498,10 @@ document.addEventListener('DOMContentLoaded', () => {
         resetBtn.addEventListener('click', (e) => {
             e.preventDefault();
             const defaults = {
-                companyName: 'PulseHR Tech Solutions',
-                hrEmail: 'hr@pulsehr.com',
-                phone: '+91 98765 43210',
-                address: 'Tech Park, Sector 62, Noida, India',
+                companyName: 'NovaPeople HR Solutions',
+                hrEmail: 'people@novapeople.com',
+                phone: '+91 98123 45670',
+                address: 'Business Hub, Sector 18, Noida, India',
                 currency: '₹',
                 theme: 'light',
                 emailAlerts: true,
